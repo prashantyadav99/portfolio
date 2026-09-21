@@ -1,6 +1,11 @@
 # Prashant | Software Engineer & Developer Portfolio
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-success?style=for-the-badge&logo=github)](https://prashantyadav99.github.io/portfolio/)
+[![GitHub](https://img.shields.io/badge/GitHub-prashantyadav99%2Fportfolio-blue?style=for-the-badge&logo=github)](https://github.com/prashantyadav99/portfolio)
+
 A modern, responsive, and aesthetically stunning developer portfolio website built using **Vanilla HTML5**, **Modern CSS3 (Glassmorphism & Variables)**, and **ES6+ JavaScript**.
+
+🌐 **Live Website**: [https://prashantyadav99.github.io/portfolio/](https://prashantyadav99.github.io/portfolio/)
 
 ---
 
