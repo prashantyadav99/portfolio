@@ -101,23 +101,23 @@
         <div class="hero-content">
           <div class="status-badge">
             <span class="pulse-dot"></span>
-            <span>Available for new projects & opportunities</span>
+            <span>Software Developer • Open to Opportunities</span>
           </div>
 
           <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Prashant</span>
+            Hey, I'm <span class="gradient-text">Prashant</span>
             <span class="title-sub">
-              I build <span id="typewriter-text" class="typewriter-text"></span><span class="typewriter-cursor">|</span>
+              Engineering <span id="typewriter-text" class="typewriter-text"></span><span class="typewriter-cursor">|</span>
             </span>
           </h1>
 
           <p class="hero-description">
-            Passionate Software Developer specializing in <strong>Python</strong>, <strong>modern web engineering</strong>, and <strong>automated systems</strong>. I turn complex challenges into sleek, high-performance software with intuitive user experiences.
+            Software developer with a strong focus on <strong>Python backend systems</strong>, <strong>data analytics pipelines</strong>, and <strong>responsive web interfaces</strong>. Contributor to <em>MausamGuard AI</em> for Smart India Hackathon and builder of practical open-source tools.
           </p>
 
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary btn-lg">
-              <span>Explore Projects</span>
+              <span>View Projects</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -152,7 +152,7 @@
           </div>
         </div>
 
-        <!-- Hero Interactive Graphic / Code Card -->
+        <!-- Hero Code Window -->
         <div class="hero-visual">
           <div class="code-window glass-panel">
             <div class="window-header">
@@ -162,76 +162,77 @@
                 <span class="control-dot dot-green"></span>
               </div>
               <div class="window-tab">
-                <span class="tab-icon">🐍</span>
-                <span class="tab-title">engineer.py</span>
+                <span class="tab-python-badge">py</span>
+                <span class="tab-title">verify_pipeline.py</span>
               </div>
               <div class="window-actions">
-                <span class="lang-tag">Python 3.12</span>
+                <span class="lang-tag">FastAPI • Python 3.13</span>
               </div>
             </div>
             <div class="code-body">
-              <pre><code><span class="code-keyword">class</span> <span class="code-class">SoftwareEngineer</span>:
-    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(<span class="code-param">self</span>):
-        <span class="code-param">self</span>.name = <span class="code-str">"Prashant"</span>
-        <span class="code-param">self</span>.role = <span class="code-str">"Full-Stack & Python Dev"</span>
-        <span class="code-param">self</span>.passions = [
-            <span class="code-str">"Clean Architecture"</span>,
-            <span class="code-str">"Intelligent Automation"</span>,
-            <span class="code-str">"Modern Web Interfaces"</span>
-        ]
-        <span class="code-param">self</span>.focus = <span class="code-str">"Shipping high-impact code"</span>
+              <pre><code><span class="code-keyword">from</span> fastapi <span class="code-keyword">import</span> APIRouter
+<span class="code-keyword">from</span> services.radar <span class="code-keyword">import</span> cross_verify_radar
+<span class="code-keyword">from</span> utils.hasher <span class="code-keyword">import</span> compute_dhash
 
-    <span class="code-keyword">def</span> <span class="code-func">solve_problem</span>(<span class="code-param">self</span>, challenge):
-        <span class="code-keyword">return</span> <span class="code-str">f"✨ Solved {challenge} with precision"</span>
+router = APIRouter(prefix=<span class="code-str">"/reports"</span>)
 
-<span class="code-comment"># Ready to build the future:</span>
-me = SoftwareEngineer()
-<span class="code-builtin">print</span>(me.solve_problem(<span class="code-str">"next-gen ideas"</span>))</code></pre>
+<span class="code-decorator">@router.post</span>(<span class="code-str">"/verify"</span>)
+<span class="code-keyword">async def</span> <span class="code-func">verify_event</span>(report: WeatherPayload):
+    <span class="code-comment"># Cross-verify report against live Doppler radar</span>
+    radar = <span class="code-keyword">await</span> cross_verify_radar(report.lat, report.lon)
+    dhash = compute_dhash(report.media_bytes)
+
+    score = calculate_confidence(report, radar, dhash)
+    <span class="code-keyword">return</span> {
+        <span class="code-str">"verified"</span>: score &gt;= <span class="code-number">0.75</span>,
+        <span class="code-str">"confidence"</span>: round(score * <span class="code-number">100</span>, <span class="code-number">1</span>),
+        <span class="code-str">"cluster"</span>: report.assigned_cluster
+    }</code></pre>
             </div>
           </div>
 
-          <!-- Floating Badges -->
+          <!-- Floating Tech Badges -->
           <div class="floating-badge badge-1 glass-card">
-            <span class="badge-icon">⚡</span>
+            <span class="badge-dot dot-green"></span>
             <div class="badge-text">
-              <strong>High Performance</strong>
-              <span>Optimized & Clean</span>
+              <strong>Smart India Hackathon '26</strong>
+              <span>SIH26069 • MausamGuard AI</span>
             </div>
           </div>
 
           <div class="floating-badge badge-2 glass-card">
-            <span class="badge-icon">💡</span>
+            <span class="badge-dot dot-blue"></span>
             <div class="badge-text">
-              <strong>Creative Thinking</strong>
-              <span>Modern Solutions</span>
+              <strong>FastAPI &amp; Python 3.13</strong>
+              <span>Async Verification Engine</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Key Stats Banner -->
+    <!-- Key Tech Focus Highlights -->
     <section class="stats-section">
       <div class="container">
         <div class="stats-grid glass-panel">
           <div class="stat-item">
-            <span class="stat-number" data-target="15">15+</span>
-            <span class="stat-label">Projects Completed</span>
+            <span class="stat-primary">SIH 2026</span>
+            <span class="stat-label">Hackathon Contributor</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat-item">
-            <span class="stat-number" data-target="100">100%</span>
-            <span class="stat-label">Clean Code Commitment</span>
+            <span class="stat-primary">Python &amp; FastAPI</span>
+            <span class="stat-label">Backend Architecture</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat-item">
-            <span class="stat-number" data-target="5">5+</span>
-            <span class="stat-label">Core Tech Stacks</span>
+            <span class="stat-primary">Data Analytics</span>
+            <span class="stat-label">Pandas &amp; Jupyter ML</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat-item">
-            <span class="stat-number" data-target="24">24/7</span>
-            <span class="stat-label">Curiosity & Growth</span>
+            <span class="stat-primary">Web Standards</span>
+            <span class="stat-label">Responsive &amp; Fast</span>
           </div>
         </div>
       </div>
@@ -241,9 +242,9 @@ me = SoftwareEngineer()
     <section class="section about-section" id="about">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Introduction</span>
+          <span class="section-tag">Background</span>
           <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-          <p class="section-subtitle">Dedicated to creating elegant, maintainable, and high-impact digital solutions.</p>
+          <p class="section-subtitle">A brief overview of my engineering background, technical interests, and experience.</p>
         </div>
 
         <div class="about-grid">
@@ -255,54 +256,69 @@ me = SoftwareEngineer()
               </div>
             </div>
             <div class="about-quick-info">
-              <h3>Prashant</h3>
-              <p class="role-badge">Software Engineer & Builder</p>
+              <h3>Prashant Yadav</h3>
+              <p class="role-badge">Software Developer</p>
               <div class="about-details-list">
                 <div class="detail-row">
                   <span class="detail-key">Location:</span>
-                  <span class="detail-val">Global / Remote Ready</span>
+                  <span class="detail-val">India (IST)</span>
                 </div>
                 <div class="detail-row">
-                  <span class="detail-key">Specialty:</span>
-                  <span class="detail-val">Python, JavaScript, Web Apps</span>
+                  <span class="detail-key">Primary Stack:</span>
+                  <span class="detail-val">Python, FastAPI, JS, SQL</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-key">Specialization:</span>
+                  <span class="detail-val">Backend &amp; Data Analytics</span>
                 </div>
                 <div class="detail-row">
                   <span class="detail-key">Status:</span>
-                  <span class="detail-val status-active">Available</span>
+                  <span class="detail-val status-active">Available for Roles</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="about-story">
-            <h3 class="story-title">Bridging creative vision with technical precision</h3>
+            <h3 class="story-title">Writing practical code &amp; building reliable systems</h3>
             <p class="story-p">
-              I am an enthusiastic developer who thrives on turning intricate challenges into clean, structured software. Whether crafting automated data workflows in Python, building responsive web interfaces, or architecting backend services, my focus is always on code readability, performance, and user satisfaction.
+              I'm a software developer based in India with a strong focus on backend engineering, data pipelines, and responsive web applications. I enjoy working through algorithmic challenges, designing robust APIs, and translating real-world operational problems into structured software.
             </p>
             <p class="story-p">
-              Continuous learning is at the heart of my approach. I embrace modern industry standards, test-driven methodologies, and modern frontend aesthetics to ensure that every product I build not only functions flawlessly but looks captivating.
+              Recently, my primary focus has been on <strong>MausamGuard AI</strong> for the <em>Smart India Hackathon (SIH26069)</em> — an autonomous multi-modal verification platform that validates crowdsourced disaster reports against Doppler radar feeds and detects duplicate images using perceptual hashing.
+            </p>
+            <p class="story-p">
+              Alongside backend services, I actively work on data analytics in Python (customer segmentation, data cleaning pipelines, and predictive models) and build lightweight, accessible web interfaces that perform reliably without bloated frameworks.
             </p>
 
             <div class="highlights-grid">
               <div class="highlight-item glass-card">
-                <div class="highlight-icon">🚀</div>
-                <h4>Full-Stack Fluency</h4>
-                <p>Seamlessly bridging backend server logic with responsive client-side interfaces.</p>
+                <div class="highlight-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                </div>
+                <h4>Backend &amp; API Development</h4>
+                <p>Designing RESTful APIs, asynchronous services, and data models using Python and FastAPI.</p>
               </div>
               <div class="highlight-item glass-card">
-                <div class="highlight-icon">⚙️</div>
-                <h4>Automated Systems</h4>
-                <p>Designing Python scripting pipelines, scrapers, and task orchestrators that save time.</p>
+                <div class="highlight-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </div>
+                <h4>Data Analytics &amp; Pipelines</h4>
+                <p>Cleaning, analyzing, and extracting patterns from real-world datasets with Pandas &amp; Jupyter.</p>
               </div>
               <div class="highlight-item glass-card">
-                <div class="highlight-icon">🎨</div>
-                <h4>Modern UI/UX</h4>
-                <p>Obsessed with polished micro-interactions, dark modes, and glassmorphism.</p>
+                <div class="highlight-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <h4>Algorithms &amp; Problem Solving</h4>
+                <p>Implementing structured computer science algorithms with time and space complexity analysis.</p>
               </div>
               <div class="highlight-item glass-card">
-                <div class="highlight-icon">🛡️</div>
-                <h4>Robust Code</h4>
-                <p>Writing testable, structured, and modular code designed for long-term scalability.</p>
+                <div class="highlight-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <h4>Web Standards &amp; UI/UX</h4>
+                <p>Crafting accessible, lightweight, and responsive frontend experiences with pure web standards.</p>
               </div>
             </div>
           </div>
@@ -338,17 +354,17 @@ me = SoftwareEngineer()
     <section class="section projects-section" id="projects">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Portfolio Showcase</span>
+          <span class="section-tag">Work</span>
           <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-          <p class="section-subtitle">Real-world applications, tools, and experiments engineered with passion.</p>
+          <p class="section-subtitle">Real-world systems, data pipelines, and web applications I've built.</p>
         </div>
 
         <!-- Filter tabs for projects -->
         <div class="filter-controls" role="tablist" aria-label="Projects filter">
           <button class="filter-btn active" data-project-filter="all">All Projects</button>
-          <button class="filter-btn" data-project-filter="python">Python & AI</button>
-          <button class="filter-btn" data-project-filter="web">Web Applications</button>
-          <button class="filter-btn" data-project-filter="tools">Tools & Automation</button>
+          <button class="filter-btn" data-project-filter="python">Python &amp; Backend</button>
+          <button class="filter-btn" data-project-filter="data">Data Analytics</button>
+          <button class="filter-btn" data-project-filter="web">Web &amp; Frontend</button>
         </div>
 
         <div class="projects-grid" id="projects-container">
@@ -361,9 +377,9 @@ me = SoftwareEngineer()
     <section class="section experience-section" id="experience">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Journey</span>
-          <h2 class="section-title">Experience & <span class="gradient-text">Milestones</span></h2>
-          <p class="section-subtitle">Key highlights, career path, and achievements along the engineering journey.</p>
+          <span class="section-tag">Timeline</span>
+          <h2 class="section-title">Experience &amp; <span class="gradient-text">Milestones</span></h2>
+          <p class="section-subtitle">Key projects, hackathons, and engineering highlights along the way.</p>
         </div>
 
         <div class="timeline" id="timeline-container">
@@ -376,9 +392,9 @@ me = SoftwareEngineer()
     <section class="section contact-section" id="contact">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Get In Touch</span>
-          <h2 class="section-title">Let's Build Something <span class="gradient-text">Great</span></h2>
-          <p class="section-subtitle">Have a project in mind, an opportunity, or just want to chat tech? Reach out anytime!</p>
+          <span class="section-tag">Connect</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Talk</span></h2>
+          <p class="section-subtitle">Interested in working together, discussing a project, or exploring opportunities? Drop me a line.</p>
         </div>
 
         <div class="contact-grid">
@@ -392,7 +408,7 @@ me = SoftwareEngineer()
                 </svg>
               </div>
               <div class="info-text">
-                <span class="info-label">Email Me</span>
+                <span class="info-label">Direct Email</span>
                 <a href="mailto:prashantyadav6400@gmail.com" id="email-link" class="info-value">prashantyadav6400@gmail.com</a>
               </div>
               <button id="copy-email-btn" class="icon-btn copy-btn" title="Copy email address" aria-label="Copy email address">
@@ -412,7 +428,7 @@ me = SoftwareEngineer()
               </div>
               <div class="info-text">
                 <span class="info-label">Location</span>
-                <span class="info-value">Open to Remote Worldwide</span>
+                <span class="info-value">India • Remote &amp; On-Site</span>
               </div>
             </div>
 
@@ -425,7 +441,7 @@ me = SoftwareEngineer()
               </div>
               <div class="info-text">
                 <span class="info-label">Response Time</span>
-                <span class="info-value">Within 24 Hours</span>
+                <span class="info-value">Replies within 24 hours</span>
               </div>
             </div>
 
