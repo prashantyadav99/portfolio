@@ -644,6 +644,19 @@ code, pre {
 .code-str { color: #10b981; }
 .code-comment { color: var(--text-muted); font-style: italic; }
 .code-builtin { color: #fbbf24; }
+.code-decorator { color: #eab308; font-weight: 500; }
+.code-number { color: #f97316; }
+
+.tab-python-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  background: rgba(99, 102, 241, 0.2);
+  color: var(--accent-cyan);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  line-height: 1;
+}
 
 /* Floating Badges */
 .floating-badge {
@@ -675,6 +688,23 @@ code, pre {
 
 .badge-icon {
   font-size: 1.4rem;
+}
+
+.badge-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.badge-dot.dot-green {
+  background-color: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.7);
+}
+
+.badge-dot.dot-blue {
+  background-color: #38bdf8;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.7);
 }
 
 .badge-text {
@@ -711,15 +741,16 @@ code, pre {
   text-align: center;
 }
 
-.stat-number {
+.stat-number,
+.stat-primary {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
+  font-size: 1.35rem;
   font-weight: 800;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 0.35rem;
 }
 
@@ -884,6 +915,19 @@ code, pre {
   padding: 1.5rem;
 }
 
+.highlight-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
 .highlight-icon {
   font-size: 1.8rem;
   margin-bottom: 0.75rem;
@@ -1021,7 +1065,25 @@ code, pre {
 }
 
 .project-icon {
-  font-size: 2.2rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--radius-md);
+}
+
+.project-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.skill-icon-wrap svg {
+  width: 22px;
+  height: 22px;
 }
 
 .project-badge {

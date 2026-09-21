@@ -1,26 +1,23 @@
-# Prashant | Software Engineer & Developer Portfolio
+# Prashant Yadav | Software Developer Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-success?style=for-the-badge&logo=github)](https://prashantyadav99.github.io/portfolio/)
-[![GitHub](https://img.shields.io/badge/GitHub-prashantyadav99%2Fportfolio-blue?style=for-the-badge&logo=github)](https://github.com/prashantyadav99/portfolio)
+[![Live Website](https://img.shields.io/badge/Live%20Website-GitHub%20Pages-2ea44f?style=flat-square&logo=github)](https://prashantyadav99.github.io/portfolio/)
+[![GitHub](https://img.shields.io/badge/GitHub-prashantyadav99%2Fportfolio-blue?style=flat-square&logo=github)](https://github.com/prashantyadav99/portfolio)
 
-A modern, responsive, and aesthetically stunning developer portfolio website built using **Vanilla HTML5**, **Modern CSS3 (Glassmorphism & Variables)**, and **ES6+ JavaScript**.
+Personal developer portfolio website showcasing projects, backend engineering with Python & FastAPI, data analytics, and responsive web development. Built with clean semantic HTML5, modern CSS3, and vanilla JavaScript.
 
-🌐 **Live Website**: [https://prashantyadav99.github.io/portfolio/](https://prashantyadav99.github.io/portfolio/)
+🌐 **Live URL**: [https://prashantyadav99.github.io/portfolio/](https://prashantyadav99.github.io/portfolio/)
 
 ---
 
-## ✨ Features
+## Features
 
-- 🌓 **Dark & Light Mode**: Seamless theme switching with system auto-detection and persistent storage (`localStorage`).
-- 💫 **Modern Aesthetics**: Glassmorphism with `backdrop-filter`, neon ambient glow orbs, and smooth micro-animations.
-- ⚡ **Lightning Fast**: Zero heavy framework overhead, 100% pure vanilla web standards, instantaneous initial page loads.
-- ⌨️ **Dynamic Hero Typewriter**: Animated typing headline highlighting core engineering skills.
-- 🗂️ **Interactive Projects Showcase**: Categorized filter tabs with expandable project specification modals (`<dialog>`).
-- 🛠️ **Skills & Tech Stack Grid**: Interactive category filters with visual proficiency indicators.
-- ⏱️ **Milestones & Journey Timeline**: Sleek vertical experience path highlighting engineering growth.
-- 📬 **Interactive Contact Form**: Client-side field validation, one-click email copying, and floating toast notifications.
-- 📱 **Fully Responsive**: Flawless layout across smartphones, tablets, laptops, and ultra-wide displays.
-- ♿ **Accessibility First**: Semantic HTML5 elements, ARIA labeling, keyboard focus management, and `prefers-reduced-motion` compliance.
+- **Dark & Light Mode**: System theme detection with persistent local storage.
+- **Featured Projects**: Highlights real-world systems including **MausamGuard AI** (Smart India Hackathon SIH26069), **Customer Segmentation Analytics**, and **Data Structures & Algorithms**.
+- **Interactive Modals**: Accessible `<dialog>` popups detailing technical architecture and features.
+- **Skills & Stack**: Filterable categories across languages, backends, data, and dev tools.
+- **Contact Form**: Client-side validation, direct mailto fallback, and one-click email copying.
+- **Performance**: Zero runtime framework dependencies, instant load speeds.
+- **Responsive & Accessible**: Keyboard navigable, semantic markup, and mobile-friendly layout.
 
 ---
 
