@@ -112,7 +112,7 @@
           </h1>
 
           <p class="hero-description">
-            Software developer with a strong focus on <strong>Python backend systems</strong>, <strong>data analytics pipelines</strong>, and <strong>responsive web interfaces</strong>. Contributor to <em>MausamGuard AI</em> for Smart India Hackathon and builder of practical open-source tools.
+            Software developer specializing in <strong>Python backend systems</strong>, <strong>data analytics pipelines</strong>, and <strong>responsive web interfaces</strong>. Dedicated to writing clean, maintainable code and building practical software solutions.
           </p>
 
           <div class="hero-actions">
@@ -152,59 +152,54 @@
           </div>
         </div>
 
-        <!-- Hero Code Window -->
+        <!-- Hero Profile Overview Card (No Code Window) -->
         <div class="hero-visual">
-          <div class="code-window glass-panel">
-            <div class="window-header">
-              <div class="window-controls">
-                <span class="control-dot dot-red"></span>
-                <span class="control-dot dot-yellow"></span>
-                <span class="control-dot dot-green"></span>
+          <div class="profile-overview-card glass-panel">
+            <div class="profile-overview-header">
+              <div class="profile-avatar-wrap">
+                <span class="profile-avatar-letter">P</span>
+                <span class="profile-status-indicator" title="Available"></span>
               </div>
-              <div class="window-tab">
-                <span class="tab-python-badge">py</span>
-                <span class="tab-title">verify_pipeline.py</span>
-              </div>
-              <div class="window-actions">
-                <span class="lang-tag">FastAPI • Python 3.13</span>
+              <div class="profile-overview-meta">
+                <h3 class="profile-overview-name">Prashant Yadav</h3>
+                <span class="profile-overview-role">Software Developer</span>
+                <span class="profile-overview-loc">📍 India • Open to Remote &amp; On-Site</span>
               </div>
             </div>
-            <div class="code-body">
-              <pre><code><span class="code-keyword">from</span> fastapi <span class="code-keyword">import</span> APIRouter
-<span class="code-keyword">from</span> services.radar <span class="code-keyword">import</span> cross_verify_radar
-<span class="code-keyword">from</span> utils.hasher <span class="code-keyword">import</span> compute_dhash
 
-router = APIRouter(prefix=<span class="code-str">"/reports"</span>)
-
-<span class="code-decorator">@router.post</span>(<span class="code-str">"/verify"</span>)
-<span class="code-keyword">async def</span> <span class="code-func">verify_event</span>(report: WeatherPayload):
-    <span class="code-comment"># Cross-verify report against live Doppler radar</span>
-    radar = <span class="code-keyword">await</span> cross_verify_radar(report.lat, report.lon)
-    dhash = compute_dhash(report.media_bytes)
-
-    score = calculate_confidence(report, radar, dhash)
-    <span class="code-keyword">return</span> {
-        <span class="code-str">"verified"</span>: score &gt;= <span class="code-number">0.75</span>,
-        <span class="code-str">"confidence"</span>: round(score * <span class="code-number">100</span>, <span class="code-number">1</span>),
-        <span class="code-str">"cluster"</span>: report.assigned_cluster
-    }</code></pre>
+            <div class="profile-focus-areas">
+              <div class="focus-area-item">
+                <span class="focus-dot dot-purple"></span>
+                <div>
+                  <strong>Backend Engineering</strong>
+                  <p>REST APIs, asynchronous services &amp; database design in Python</p>
+                </div>
+              </div>
+              <div class="focus-area-item">
+                <span class="focus-dot dot-blue"></span>
+                <div>
+                  <strong>Data Analytics &amp; Pipelines</strong>
+                  <p>Data cleaning, exploratory modeling &amp; automation with Pandas</p>
+                </div>
+              </div>
+              <div class="focus-area-item">
+                <span class="focus-dot dot-green"></span>
+                <div>
+                  <strong>Responsive Web Interfaces</strong>
+                  <p>Fast, accessible, and structured client-side applications</p>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <!-- Floating Tech Badges -->
-          <div class="floating-badge badge-1 glass-card">
-            <span class="badge-dot dot-green"></span>
-            <div class="badge-text">
-              <strong>Smart India Hackathon '26</strong>
-              <span>SIH26069 • MausamGuard AI</span>
-            </div>
-          </div>
-
-          <div class="floating-badge badge-2 glass-card">
-            <span class="badge-dot dot-blue"></span>
-            <div class="badge-text">
-              <strong>FastAPI &amp; Python 3.13</strong>
-              <span>Async Verification Engine</span>
+            <div class="profile-overview-footer">
+              <div class="overview-tags">
+                <span class="overview-tag">Python</span>
+                <span class="overview-tag">FastAPI</span>
+                <span class="overview-tag">Pandas</span>
+                <span class="overview-tag">JavaScript</span>
+                <span class="overview-tag">SQL</span>
+                <span class="overview-tag">Git</span>
+              </div>
             </div>
           </div>
         </div>
@@ -216,13 +211,13 @@ router = APIRouter(prefix=<span class="code-str">"/reports"</span>)
       <div class="container">
         <div class="stats-grid glass-panel">
           <div class="stat-item">
-            <span class="stat-primary">SIH 2026</span>
-            <span class="stat-label">Hackathon Contributor</span>
+            <span class="stat-primary">Python</span>
+            <span class="stat-label">Core Backend &amp; Scripting</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat-item">
-            <span class="stat-primary">Python &amp; FastAPI</span>
-            <span class="stat-label">Backend Architecture</span>
+            <span class="stat-primary">FastAPI &amp; REST</span>
+            <span class="stat-label">API Architecture</span>
           </div>
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat-item">
@@ -232,7 +227,7 @@ router = APIRouter(prefix=<span class="code-str">"/reports"</span>)
           <div class="stat-divider" aria-hidden="true"></div>
           <div class="stat-item">
             <span class="stat-primary">Web Standards</span>
-            <span class="stat-label">Responsive &amp; Fast</span>
+            <span class="stat-label">Responsive &amp; Accessible</span>
           </div>
         </div>
       </div>
@@ -285,10 +280,7 @@ router = APIRouter(prefix=<span class="code-str">"/reports"</span>)
               I'm a software developer based in India with a strong focus on backend engineering, data pipelines, and responsive web applications. I enjoy working through algorithmic challenges, designing robust APIs, and translating real-world operational problems into structured software.
             </p>
             <p class="story-p">
-              Recently, my primary focus has been on <strong>MausamGuard AI</strong> for the <em>Smart India Hackathon (SIH26069)</em> — an autonomous multi-modal verification platform that validates crowdsourced disaster reports against Doppler radar feeds and detects duplicate images using perceptual hashing.
-            </p>
-            <p class="story-p">
-              Alongside backend services, I actively work on data analytics in Python (customer segmentation, data cleaning pipelines, and predictive models) and build lightweight, accessible web interfaces that perform reliably without bloated frameworks.
+              My technical work focuses on designing backend services and automation pipelines in Python, exploring structured datasets using Pandas and Jupyter, and crafting lightweight, accessible web interfaces using modern web standards.
             </p>
 
             <div class="highlights-grid">

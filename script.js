@@ -112,21 +112,20 @@ const PORTFOLIO_CONFIG = {
   // Featured Projects
   projects: [
     {
-      id: "mausam-guard",
-      title: "MausamGuard AI",
+      id: "automation-pipeline",
+      title: "Automated Data Ingestion & Pipeline Engine",
       category: "python",
-      badge: "Smart India Hackathon '26",
-      icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>`,
-      description: "Autonomous multi-modal verification platform for real-time disaster monitoring (Problem Statement SIH26069). Ingests crowdsourced reports, computes perceptual hashes (dHash) to eliminate duplicate media, and cross-references reports against physical Doppler radar feeds.",
-      tags: ["Python 3.13", "FastAPI", "WebSockets", "Docker", "Leaflet"],
-      demoUrl: "https://github.com/krishnakant09/MausamGuard",
-      repoUrl: "https://github.com/krishnakant09/MausamGuard",
+      badge: "Python & Automation",
+      icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
+      description: "Python-based automated data extraction pipeline for fetching records from REST endpoints, parsing structured JSON payloads, and generating clean normalized datasets.",
+      tags: ["Python 3", "REST APIs", "Automation", "JSON Processing", "Data Pipelines"],
+      demoUrl: "https://github.com/prashantyadav99/python-program",
+      repoUrl: "https://github.com/prashantyadav99/python-program",
       features: [
-        "Autonomous verification engine cross-correlating citizen reports with live weather radar metrics",
-        "Perceptual hashing (dHash) pipeline detecting near-duplicate media and misinformation",
-        "Multi-factor explainable confidence scoring engine (0-100%)",
-        "Real-time WebSocket streaming to emergency response command center with Leaflet map cluster view",
-        "Dockerized microservices deployment with automated health checking"
+        "Automated API data ingestion with custom error handling and retry logic",
+        "Data normalization pipelines formatting records into structured CSV and JSON feeds",
+        "Modular utility architecture for recurring script execution and automation",
+        "Configurable CLI options and environment-driven parameterization"
       ]
     },
     {
@@ -186,9 +185,9 @@ const PORTFOLIO_CONFIG = {
   milestones: [
     {
       period: "2025 - Present",
-      role: "MausamGuard AI & Hackathon Engineering",
-      place: "Smart India Hackathon (SIH26069)",
-      description: "Engineered FastAPI ingestion pipelines, radar verification logic, perceptual hashing (dHash) deduplication, and WebSocket communication for the MausamGuard real-time disaster monitoring platform."
+      role: "Backend & Full-Stack Development",
+      place: "Independent Projects & Open Source",
+      description: "Developing Python backend services, working with REST APIs, automating data workflows, and building responsive web interfaces."
     },
     {
       period: "2024 - 2025",

@@ -12,7 +12,7 @@ Personal developer portfolio website showcasing projects, backend engineering wi
 ## Features
 
 - **Dark & Light Mode**: System theme detection with persistent local storage.
-- **Featured Projects**: Highlights real-world systems including **MausamGuard AI** (Smart India Hackathon SIH26069), **Customer Segmentation Analytics**, and **Data Structures & Algorithms**.
+- **Featured Projects**: Highlights real-world systems including **Automated Data Ingestion & Pipeline Engine**, **Customer Segmentation Analytics**, and **Data Structures & Algorithms**.
 - **Interactive Modals**: Accessible `<dialog>` popups detailing technical architecture and features.
 - **Skills & Stack**: Filterable categories across languages, backends, data, and dev tools.
 - **Contact Form**: Client-side validation, direct mailto fallback, and one-click email copying.
